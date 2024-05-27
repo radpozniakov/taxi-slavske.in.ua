@@ -1,0 +1,25 @@
+{
+  "name": "taxi-slavske.in.ua",
+  "version": "1.0.0",
+  "description": "Simple page for advertising a local taxi",
+  "main": "index.js",
+  "scripts": {
+    "dev": "eleventy --serve --quiet",
+    "build": "rm -rf dist && eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/radpozniakov/taxi-slavske.in.ua.git"
+  },
+  "author": "Rad Pozniakov",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "autoprefixer": "^10.4.19",
+    "html-minifier": "^4.0.0",
+    "js-yaml": "^4.1.0",
+    "postcss": "^8.4.38",
+    "postcss-csso": "^6.0.1",
+    "postcss-import": "^16.1.0"
+  }
+}
