@@ -1,5 +1,4 @@
 // const fs = require('fs');
-// const htmlMin = require('html-minifier');
 // const yaml = require('js-yaml');
 // const postcss = require('postcss');
 // const postcssCsso = require('postcss-csso');
