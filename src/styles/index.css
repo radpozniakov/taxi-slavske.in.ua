@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* text smooth */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+:root {
+  --higlight-color: #ffcd00;
+}
+
+.page {
+  font-family: system-ui, Arial, Helvetica, sans-serif;
+}
+.page__info {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.page__cover {
+  height: 35vh;
+}
+.page__cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+.page__info {
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 1em;
+  padding-bottom: 6em;
+}
+
+.driver {
+  /* background-color: #ccc; */
+  padding-top: 3em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.driver_info {
+  display: flex;
+  gap: 1.5em;
+  align-items: center;
+}
+
+.driver__name {
+  font-size: 1.75em;
+  line-height: 1.75em;
+}
+
+.driver__expertise {
+  font-size: 1em;
+  font-weight: normal;
+  color: #545454;
+}
+
+.information__driver-photo {
+  width: 6em;
+  height: 6em;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.driver__phones {
+  display: flex;
+
+  list-style: none;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  gap: 1em;
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.driver__phone-item {
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+}
+
+.driver__phone-icon {
+  width: 2em;
+  height: 2em;
+}
+
+.driver__phone-item a {
+  color: #00589f;
+  font-size: 1em;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.information__about-service {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-size: 1.125em;
+  line-height: 1.5em;
+}
+.information__about-service h1 {
+  font-size: 2em;
+  line-height: 2em;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.information__about-service p {
+  margin-bottom: 0.5em;
+}
+
+.call-section {
+  position: fixed;
+  width: 100%;
+  height: 64px;
+  bottom: 0;
+}
+.call-action {
+  background-color: var(--higlight-color);
+  height: 100%;
+}
+.call-action__link {
+  background-color: var(--higlight-color);
+  height: 100%;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  font-size: 1.25em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

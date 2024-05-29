@@ -16,6 +16,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "autoprefixer": "^10.4.19",
+    "html-minifier-terser": "^7.2.0",
     "js-yaml": "^4.1.0",
     "postcss": "^8.4.38",
     "postcss-csso": "^6.0.1",

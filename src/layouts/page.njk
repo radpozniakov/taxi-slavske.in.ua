@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ siteData.title }}</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="view-transition" content="same-origin">
+    <link rel="stylesheet" href="/styles/index.css" />
+    <meta name="description" content="{{ siteData.description }}">
+  </head>
+  <body class="page__body">
+    {{ content | safe }}
+  </body>
+</html>
