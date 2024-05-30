@@ -2,10 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* text smooth */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 :root {
   --higlight-color: #ffcd00;
 }
@@ -13,14 +13,17 @@
 .page {
   font-family: system-ui, Arial, Helvetica, sans-serif;
 }
+
 .page__info {
-  max-width: 500px;
+  max-width: 32em;
   margin: 0 auto;
 }
 
 .page__cover {
-  height: 35vh;
+  width: 100%;
+  height: 20vh;
 }
+
 .page__cover img {
   width: 100%;
   height: 100%;
@@ -31,15 +34,14 @@
   padding-left: 1em;
   padding-right: 1em;
   padding-top: 1em;
-  padding-bottom: 6em;
+  padding-bottom: 1.5em;
 }
 
 .driver {
-  /* background-color: #ccc; */
-  padding-top: 3em;
+  padding-top: 0.5em;
   display: flex;
   flex-direction: column;
-  gap: 1.5em;
+  gap: 1em;
 }
 
 .driver_info {
@@ -49,8 +51,8 @@
 }
 
 .driver__name {
-  font-size: 1.75em;
-  line-height: 1.75em;
+  font-size: 1.25em;
+  line-height: 1.5em;
 }
 
 .driver__expertise {
@@ -60,25 +62,26 @@
 }
 
 .information__driver-photo {
-  width: 6em;
-  height: 6em;
+  width: 4.5em;
+  height: 4.5em;
   border-radius: 50%;
   object-fit: cover;
 }
 
 .driver__phones {
   display: flex;
-
+  flex-direction: column;
   list-style: none;
   padding-top: 1em;
   padding-bottom: 1em;
-  gap: 1em;
+  gap: 0.5em;
   border-top: 1px solid #e1e1e1;
   border-bottom: 1px solid #e1e1e1;
 }
 
 .driver__phone-item {
   display: flex;
+  flex: 1;
   align-items: center;
   gap: 0.25em;
 }
@@ -95,6 +98,10 @@
   text-decoration: none;
 }
 
+.driver__phone-item a:hover {
+  text-decoration: underline;
+}
+
 .information__about-service {
   padding-top: 1em;
   padding-bottom: 1em;
@@ -102,28 +109,31 @@
   line-height: 1.5em;
 }
 .information__about-service h1 {
-  font-size: 2em;
+  font-size: 1.125em;
   line-height: 2em;
-  font-weight: 400;
-  margin-bottom: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.25em;
 }
 
 .information__about-service p {
-  margin-bottom: 0.5em;
+  font-size: 1em;
+  line-height: 1.5;
 }
 
 .call-section {
-  position: fixed;
-  width: 100%;
-  height: 64px;
-  bottom: 0;
+  max-width: 32em;
+  margin: 0 auto;
+  padding-left: 1em;
+  padding-right: 1em;
 }
+
 .call-action {
-  background-color: var(--higlight-color);
   height: 100%;
 }
+
 .call-action__link {
   background-color: var(--higlight-color);
+  padding: 0.75em 0;
   height: 100%;
   text-align: center;
   text-decoration: none;
@@ -135,4 +145,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media screen and (min-width: 400px) {
+  .driver__phones {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .page {
+    font-size: clamp(1rem, 0.75rem + 0.5vw, 1.25rem);
+  }
+}
+
+@media screen and (max-aspect-ratio: 0.75) and (min-width: 700px) {
+  .page__cover {
+    height: 45vh;
+  }
 }
