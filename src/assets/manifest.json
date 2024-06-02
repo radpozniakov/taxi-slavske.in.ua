@@ -1,0 +1,18 @@
+{
+  "name": "Таксі Славське",
+  "description": "Трансфер, Екскурсії, Індивідуальні маршрути, Доставка",
+  "lang": "uk",
+  "dir": "ltr",
+  "id": "/",
+  "start_url": "/",
+  "theme_color": "#fff",
+  "display": "browser",
+  "orientation": "natural",
+  "icons": [
+    {
+      "src": "/assets/favicon/apple-touch-icon.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    }
+  ]
+}
