@@ -28,6 +28,15 @@
     <meta property="og:image:height" content="180">
     <meta property="og:image:type" content="image/png">
     <meta name="description" content="{{ siteData.description }}">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2NME2ETMVH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-2NME2ETMVH');
+    </script>
   </head>
   <body class="page__body">
     {{ content | safe }}
