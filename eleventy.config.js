@@ -50,7 +50,7 @@ module.exports = (config) => {
   });
 
   [
-    'src/google4b4a37adc8698bd0.html',
+    'src/google705eff3b8289fba2.html',
     'src/index.html',
     'src/styles/index.css',
     'src/assets',
