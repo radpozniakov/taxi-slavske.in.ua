@@ -32,4 +32,21 @@
   <body class="page__body">
     {{ content | safe }}
   </body>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Create the script element
+    var gtagScript = document.createElement("script");
+    gtagScript.defer = true; // Use defer attribute
+    gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=AW-16735371688";
+    document.head.appendChild(gtagScript);
+    gtagScript.onload = function () {
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "AW-16735371688");
+    };
+  });
+</script>
 </html>
