@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://taxi-slavske.in.ua/sitemap.xml

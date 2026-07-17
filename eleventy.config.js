@@ -51,10 +51,7 @@ module.exports = (config) => {
 
   [
     'src/google705eff3b8289fba2.html',
-    'src/index.html',
-    'src/styles/index.css',
     'src/assets',
-    'src/manifest.json',
     'src/sitemap.xml',
     'src/robots.txt',
   ].forEach((path) => config.addPassthroughCopy(path));

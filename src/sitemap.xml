@@ -3,6 +3,10 @@
 	xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>https://taxi-slavske.in.ua</loc>
-		<lastmod>2024-06-01</lastmod>
+		<lastmod>2024-12-12</lastmod>
 	</url>
+    <url>
+        <loc>https://taxi-slavske.in.ua/доставка-їжі/</loc>
+        <lastmod>2024-12-12</lastmod>
+    </url>
 </urlset>

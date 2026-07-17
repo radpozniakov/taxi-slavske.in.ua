@@ -1,210 +1,497 @@
+:root {
+  --color-white: #fff;
+  --color-black: #000;
+  --color-orange: #ffcd00;
+  --color-gray-1: #f5f5f5;
+  --color-gray-2: #747474;
+  --bg-color: var(--color-gray-1);
+  --primary-color: var(--color-orange);
+  --primary-text-color: var(--color-black);
+  --secondary-text-color: var(--color-gray-2);
+}
+
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
 }
 
-:root {
-  --higlight-color: #ffcd00;
-}
 body {
-  background-color: #fff;
+  background-color: var(--bg-color);
+}
+
+.content {
+  max-width: 580px;
+  margin: 0 auto;
+  padding: 0 16px;
 }
 
 .page {
-  min-height: 100vh;
-  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-bottom: 48px;
+}
+
+/* Intro banner */
+.intro {
+  display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  font-family: system-ui, Arial, Helvetica, sans-serif;
-  display: flex;
+  min-height: 125px;
+  background-image: url(../assets/img/slavske_landscape.jpg);
+  background-size: cover;
+  max-height: 280px;
+  aspect-ratio: 16 / 4;
 }
 
-.page__info {
-  max-width: 32em;
-  margin: 0 auto;
+.intro__title {
+  padding: 4px 8px;
+  color: var(--color-white);
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Open Sans',
+    'Helvetica Neue',
+    sans-serif;
+  font-size: 32px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.page__cover {
+/* Navigation */
+.navigation {
   width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  background-color: #fff;
 }
 
-.page__cover img {
+.navigation__list {
+  display: flex;
+  gap: 16px;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  object-position: top;
-  display: none;
-}
-
-.data-widget {
-  padding-left: 1em;
-  padding-right: 1em;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  background-color: #fff;
-  max-width: 35em;
-  border-radius: 20px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-}
-
-.driver {
-  padding-top: 0.5em;
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-}
-
-.driver_info {
-  display: flex;
-  gap: 1.5em;
-  align-items: center;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  border-top: solid 1px #eaeaea;
-  border-bottom: solid 1px #eaeaea;
-}
-
-.driver__name {
-  font-size: 1.25em;
-  line-height: 1.5em;
-}
-
-.driver__expertise {
-  font-size: 1em;
-  font-weight: normal;
-  color: #545454;
-}
-
-.information__driver-photo {
-  width: 4.5em;
-  height: 4.5em;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.driver__phones {
-  display: flex;
-  flex-direction: column;
   list-style: none;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  gap: 2em;
 }
 
-.driver__phone-item {
-  flex: 1;
-}
-.driver__phone-label {
-  display: flex;
-  gap: 0.5em;
-  align-items: center;
-  margin-bottom: 0.5em;
-}
-
-.driver__phone-icon {
-  width: 2em;
-  height: 2em;
-}
-
-.driver__phone-item a {
-  background-color: #ffcd00;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  color: #000;
-  text-align: center;
-  font-size: 1em;
-  font-weight: 600;
-  text-decoration: none;
+/* Action button (shared) */
+.action-btn {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  gap: 0.5em;
-  border-radius: 10px;
-}
-
-.driver__phone-item a:hover {
-  text-decoration: underline;
-  background-color: #edbf03;
-}
-
-.information__about-service {
-  padding-bottom: 1em;
-  font-size: 1.125em;
-  line-height: 1.5em;
-}
-.information__about-service h1 {
-  font-size: 1.75em;
-  line-height: 2em;
-  font-weight: 600;
-  margin-bottom: 0.25em;
-}
-
-.information__about-service p {
-  font-size: 1em;
-  line-height: 1.5;
-}
-
-.call-section {
-  max-width: 32em;
-  margin: 0 auto;
-  padding-left: 1em;
-  padding-right: 1em;
-}
-
-.call-action {
-  height: 100%;
-}
-
-.call-action__link {
-  background-color: var(--higlight-color);
-  padding: 0.75em 0;
-  height: 100%;
-  text-align: center;
+  gap: 8px;
+  padding: 4px 20px 4px 14px;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border-radius: 6px;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Open Sans',
+    'Helvetica Neue',
+    sans-serif;
+  font-size: 24px;
   text-decoration: none;
-  color: #000;
-  font-size: 1.25em;
-  font-weight: 600;
+}
+
+.action-btn--no-icon {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.action-btn--active {
+  background-color: var(--primary-color);
+  border: solid 1px var(--primary-color);
+}
+
+.action-btn__icon {
+  width: 32px;
+  max-width: 100%;
+}
+
+.action-btn__title {
   letter-spacing: 1px;
-  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* Taxi service card */
+.taxi-service {
+  position: relative;
+  padding-bottom: 16px;
+  background-color: var(--color-white);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.taxi-service img {
+  width: 100%;
+  max-width: 100%;
+}
+
+.taxi-service__car-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  background-color: var(--color-white);
+}
+
+.taxi-service__content {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.taxi-service__map-marker {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 6px 12px;
+  background-color: rgba(255, 255, 255, 0.61);
+  border: solid 1px var(--color-white);
+  border-radius: 6px;
+  color: #747474;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Open Sans',
+    'Helvetica Neue',
+    sans-serif;
+  text-decoration: none;
+}
+
+.taxi-service__title {
+  margin: 16px 0 6px;
+  padding: 0;
+  color: var(--primary-text-color);
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Open Sans',
+    'Helvetica Neue',
+    sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.taxi-service__rate {
   display: flex;
-  justify-content: center;
   align-items: center;
+  gap: 6px;
+  margin-bottom: 16px;
 }
 
-@media screen and (min-width: 400px) {
-  .driver__phones {
-    flex-direction: row;
-  }
-  .page__cover img {
-    display: block;
-  }
-  .driver__phones {
-    gap: 1em;
-  }
+.taxi-service__rate-number {
+  color: var(--secondary-text-color);
+  white-space: nowrap;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Open Sans',
+    'Helvetica Neue',
+    sans-serif;
+  font-size: 16px;
 }
 
-@media screen and (min-width: 500px) {
-  .page {
-    font-size: clamp(1rem, 0.75rem + 0.5vw, 1.25rem);
-  }
-  .data-widget {
-    padding: 2em;
-    top: -2em;
-  }
+.taxi-service__description {
+  color: var(--primary-text-color);
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Open Sans',
+    'Helvetica Neue',
+    sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.taxi-service__phones {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.taxi-service__phones .action-btn {
+  font-size: 18px;
+}
+
+/* Taxi feedback / reviews */
+.taxi-feedback {
+  padding-top: 24px;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: #fff;
+  border-radius: 12px;
+}
+
+.taxi-feedback__title {
+  margin-bottom: 6px;
+  padding: 0;
+  color: var(--primary-text-color);
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Open Sans',
+    'Helvetica Neue',
+    sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.taxi-feedback__list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 16px;
+}
+
+.taxi-feedback__item {
+  padding-bottom: 12px;
+  border-bottom: solid 1px var(--color-gray-1);
+}
+
+.taxi-feedback__item:last-child {
+  border-bottom: none;
+}
+
+.taxi-feedback__name {
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Open Sans',
+    'Helvetica Neue',
+    sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.taxi-feedback__author {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.taxi-feedback__date {
+  color: #515151;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Open Sans',
+    'Helvetica Neue',
+    sans-serif;
+  font-size: 16px;
+}
+
+.taxi-feedback__rate {
+  margin-bottom: 10px;
+}
+
+.taxi-feedback__text {
+  color: var(--primary-text-color);
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Open Sans',
+    'Helvetica Neue',
+    sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* Food delivery */
+.food-delivery__title {
+  margin: 0;
+  padding: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Open Sans',
+    'Helvetica Neue',
+    sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.food-delivery__description {
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Open Sans',
+    'Helvetica Neue',
+    sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.food-delivery__restaurants {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.food-delivery__restaurant {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background-color: var(--color-white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.food-delivery__restaurant-picture {
+  display: block;
+  width: 100%;
+  height: auto;
+  background-color: var(--color-white);
+}
+
+.food-delivery__restaurant-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+}
+
+.food-delivery__restaurant-title {
+  color: var(--primary-text-color);
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Open Sans',
+    'Helvetica Neue',
+    sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.food-delivery__restaurant-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 8px;
+  list-style: none;
+}
+
+.food-delivery__restaurant-info-item {
+  color: var(--secondary-text-color);
+  white-space: nowrap;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Open Sans',
+    'Helvetica Neue',
+    sans-serif;
+  font-size: 16px;
+}
+
+.food-delivery__restaurant-info-item a {
+  color: #0a53b4;
+}
+
+.food-delivery__restaurant-rate {
+  margin-bottom: 2px;
+}
+
+.food-delivery__restaurant-rate-stars {
+  position: relative;
+  top: 1px;
+  height: 16px;
+}
+
+.food-delivery__restaurant-photo {
+  width: 100%;
+  max-width: 100%;
+}
+
+.food-delivery__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.food-delivery__actions .action-btn {
+  font-size: 18px;
 }
