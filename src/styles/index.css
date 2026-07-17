@@ -45,6 +45,7 @@ body {
   background-size: cover;
   max-height: 280px;
   aspect-ratio: 16 / 4;
+  width: 100%;
 }
 
 .intro__title {
